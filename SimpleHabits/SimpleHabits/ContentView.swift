@@ -13,30 +13,35 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView(selection: $vm.selectedTabBarItem ) {
-                ForYouView()
-                    .tabItem {
-                        Label(SimpleHabitsViews.forYou.rawValue, systemImage: "play")
-                    }
+                Group {
+                    ForYouView()
+                        .tabItem {
+                            Label(SimpleHabitsViews.forYou.rawValue, systemImage: "play")
+                        }
 
-                MeditateView()
-                    .tabItem {
-                        Label(SimpleHabitsViews.meditate.rawValue, systemImage: "circle")
-                    }
+                    MeditateView()
+                        .tabItem {
+                            Label(SimpleHabitsViews.meditate.rawValue, systemImage: "circle.dotted")
+                        }
 
-                SleepView()
-                    .tabItem {
-                        Label(SimpleHabitsViews.sleep.rawValue, systemImage: "moon")
-                    }
+                    SleepView()
+                        .tabItem {
+                            Label(SimpleHabitsViews.sleep.rawValue, systemImage: "moon")
+                        }
 
-                SearchView()
-                    .tabItem {
-                        Label(SimpleHabitsViews.search.rawValue, systemImage: "play")
-                    }
-                    .toolbarBackground(Color.black, for: .tabBar)
+                    SearchView()
+                        .tabItem {
+                            Label(SimpleHabitsViews.search.rawValue, systemImage: "magnifyingglass")
+                        }
+                }
+                .toolbarBackground(.black.opacity(0.8), for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
             }
         }
+        .tint(.white)
     }
 }
+
 
 enum SimpleHabitsViews: String {
     case forYou = "For You",
