@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82983F2AD2B48F006784A7 /* ViewModel.swift */; };
+		9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */; };
 		9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */; };
 		9EFF317B2AD1EDFC001B4048 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF317A2AD1EDFC001B4048 /* ContentView.swift */; };
 		9EFF317D2AD1EDFF001B4048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFF317C2AD1EDFF001B4048 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		9E82983F2AD2B48F006784A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHabitsViews.swift; sourceTree = "<group>"; };
 		9EFF31752AD1EDFC001B4048 /* SimpleHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHabitsApp.swift; sourceTree = "<group>"; };
 		9EFF317A2AD1EDFC001B4048 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E8298412AD33743006784A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9EFF316C2AD1EDFB001B4048 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 			children = (
 				9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */,
 				9EFF317A2AD1EDFC001B4048 /* ContentView.swift */,
+				9E8298412AD33743006784A7 /* Models */,
 				9EFF31862AD1F5D2001B4048 /* Views */,
 				9E82983F2AD2B48F006784A7 /* ViewModel.swift */,
 				9EFF317C2AD1EDFF001B4048 /* Assets.xcassets */,
@@ -165,6 +176,7 @@
 				9EFF318A2AD1F8B2001B4048 /* MeditateView.swift in Sources */,
 				9EFF318E2AD1F8E1001B4048 /* SearchView.swift in Sources */,
 				9EFF31882AD1F5E9001B4048 /* ForYouView.swift in Sources */,
+				9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */,
 				9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */,
 				9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */,
 			);

@@ -42,14 +42,6 @@ struct ContentView: View {
     }
 }
 
-
-enum SimpleHabitsViews: String {
-    case forYou = "For You",
-         meditate = "Meditate",
-         sleep = "Sleep",
-         search = "Search"
-}
-
 #Preview {
     ContentView(vm: ViewModel())
 }
