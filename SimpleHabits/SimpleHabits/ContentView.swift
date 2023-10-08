@@ -31,6 +31,7 @@ struct ContentView: View {
                     .tabItem {
                         Label(SimpleHabitsViews.search.rawValue, systemImage: "play")
                     }
+                    .toolbarBackground(Color.black, for: .tabBar)
             }
             .toolbarBackground(Color.black, for: .tabBar)
         }
