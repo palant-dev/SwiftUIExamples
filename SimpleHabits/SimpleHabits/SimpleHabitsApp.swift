@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct SimpleHabitsApp: App {
+    @StateObject private var vm = ViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(vm: vm)
         }
     }
 }

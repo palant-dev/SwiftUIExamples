@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedTabbarItem: SimpleHabitsViews = .forYou
+    @ObservedObject var vm: ViewModel
+
     var body: some View {
         VStack {
-            TabView(selection: $selectedTabbarItem) {
+            TabView(selection: $vm.selectedTabBarItem ) {
                 ForYouView()
                     .tabItem {
                         Label(SimpleHabitsViews.forYou.rawValue, systemImage: "play")
@@ -33,7 +34,6 @@ struct ContentView: View {
                     }
                     .toolbarBackground(Color.black, for: .tabBar)
             }
-            .toolbarBackground(Color.black, for: .tabBar)
         }
     }
 }
@@ -46,5 +46,5 @@ enum SimpleHabitsViews: String {
 }
 
 #Preview {
-    ContentView()
+    ContentView(vm: ViewModel())
 }
