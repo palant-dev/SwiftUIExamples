@@ -27,6 +27,12 @@ struct ForYouView: View {
                 .padding()
 
             ScrollView() {
+                Text(isSessionAlreadyStarted ? "Continue Listening" : "Start here")
+                    .font(.title2)
+                    .foregroundStyle(.white).bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+
                 ActivityCard(isActivityStarted: isSessionAlreadyStarted, lastSessionCompletionPercentage: lastSessionPercentageToCompletion)
                     .frame(minHeight: 284)
 
