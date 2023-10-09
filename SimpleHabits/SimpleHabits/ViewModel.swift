@@ -9,4 +9,5 @@ import Foundation
 
 class ViewModel: ObservableObject {
     @Published var selectedTabBarItem: SimpleHabitsViews = .forYou
+    @Published var isSessionAlreadyStarted = false
 }
