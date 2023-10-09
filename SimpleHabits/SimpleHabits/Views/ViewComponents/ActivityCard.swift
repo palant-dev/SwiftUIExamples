@@ -13,10 +13,9 @@ struct ActivityCard: View {
 
     var body: some View {
         Button {
-            #warning("Add logic to the button of activity card")
+#warning("Add logic to the button of activity card")
         } label: {
             ZStack(alignment: .bottomLeading) {
-
                 RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
                     .foregroundStyle(.black)
                     .overlay {
@@ -26,35 +25,25 @@ struct ActivityCard: View {
                                 .scaledToFill()
                                 .frame(width: geometry.size.width)
 
-
                             LinearGradient(gradient: Gradient(colors: [.clear,.black.opacity(0.4)]), startPoint: .init(x: 0, y: 0), endPoint: .init(x: 0, y:0.9))
                         }
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous))
                     }
-
-
 
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Antonio's starter")
                             .font(.title.bold())
                             .foregroundStyle(.white)
+
                         Text("5 mins · Meditation")
                             .foregroundStyle(.white)
-                        RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
-                            .frame(height: 4)
-                            .foregroundStyle(.white)
-                            .overlay {
-                                GeometryReader { geometry in
-                                    Rectangle()
-                                        .frame(width: geometry.size.width * CGFloat(lastSessionCompletionPercentage))
-                                        .tint(.accent)
-                                }
-                            }
+
+                        ActivityCardProgressionBar(lastSessionCompletionPercentage: lastSessionCompletionPercentage)
                     }
 
                     Spacer()
-
+                    
                     Circle()
                         .frame(width: 50)
                         .foregroundStyle(.accent)
@@ -63,7 +52,6 @@ struct ActivityCard: View {
                                 .font(.title2)
                                 .foregroundStyle(.white)
                         }
-
                 }
                 .padding(.horizontal)
                 .padding(.vertical)

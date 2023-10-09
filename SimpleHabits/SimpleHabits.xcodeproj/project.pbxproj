@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */; };
+		9E5DCDD12AD444D600BAB28B /* ActivityCardProgressionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */; };
 		9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82983F2AD2B48F006784A7 /* ViewModel.swift */; };
 		9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */; };
 		9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardProgressionBar.swift; sourceTree = "<group>"; };
 		9E82983F2AD2B48F006784A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHabitsViews.swift; sourceTree = "<group>"; };
 		9EFF31752AD1EDFC001B4048 /* SimpleHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */,
+				9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5DCDD12AD444D600BAB28B /* ActivityCardProgressionBar.swift in Sources */,
 				9EFF317B2AD1EDFC001B4048 /* ContentView.swift in Sources */,
 				9EFF318C2AD1F8D1001B4048 /* SleepView.swift in Sources */,
 				9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */,
