@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */; };
 		9E5DCDD12AD444D600BAB28B /* ActivityCardProgressionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */; };
+		9E5DCDD32AD44EC600BAB28B /* TodayProgressionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD22AD44EC600BAB28B /* TodayProgressionCard.swift */; };
 		9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82983F2AD2B48F006784A7 /* ViewModel.swift */; };
 		9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */; };
 		9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardProgressionBar.swift; sourceTree = "<group>"; };
+		9E5DCDD22AD44EC600BAB28B /* TodayProgressionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressionCard.swift; sourceTree = "<group>"; };
 		9E82983F2AD2B48F006784A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHabitsViews.swift; sourceTree = "<group>"; };
 		9EFF31752AD1EDFC001B4048 /* SimpleHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,7 @@
 			children = (
 				9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */,
 				9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */,
+				9E5DCDD22AD44EC600BAB28B /* TodayProgressionCard.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */,
 				9EFF318A2AD1F8B2001B4048 /* MeditateView.swift in Sources */,
 				9EFF318E2AD1F8E1001B4048 /* SearchView.swift in Sources */,
+				9E5DCDD32AD44EC600BAB28B /* TodayProgressionCard.swift in Sources */,
 				9EFF31882AD1F5E9001B4048 /* ForYouView.swift in Sources */,
 				9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */,
 				9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */,

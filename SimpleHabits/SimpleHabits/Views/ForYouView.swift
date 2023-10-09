@@ -22,10 +22,6 @@ struct ForYouView: View {
                 }
                 .padding()
 
-            Text(isSessionAlreadyStarted ? "Continue Listening" : "Start here")
-                .foregroundStyle(.white).bold()
-                .padding()
-
             ScrollView() {
                 Text(isSessionAlreadyStarted ? "Continue Listening" : "Start here")
                     .font(.title2)
@@ -36,10 +32,7 @@ struct ForYouView: View {
                 ActivityCard(isActivityStarted: isSessionAlreadyStarted, lastSessionCompletionPercentage: lastSessionPercentageToCompletion)
                     .frame(minHeight: 284)
 
-                RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
-                    .foregroundStyle(.wellnessScoreCardbg)
-                    .padding(.horizontal)
-                    .frame(minHeight: 284)
+                TodayProgressionCard()
             }
             .refreshable {
                 #warning("Add the action to the refreshing of For You View")

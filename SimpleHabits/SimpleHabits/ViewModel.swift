@@ -19,4 +19,8 @@ class ViewModel: ObservableObject {
     var lastSessionPercentageToCompletion: Double {
         Double(secondsCompletedLastSession)/Double(lastSessionDuration)
     }
+
+    // MARK: Today status logic
+    @Published var amountOfSecondsToday = 0
+    @Published var todayTimeGoal = 600
 }
