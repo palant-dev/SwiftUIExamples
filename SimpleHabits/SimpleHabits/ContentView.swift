@@ -34,7 +34,7 @@ struct ContentView: View {
                             Label(SimpleHabitsViews.search.rawValue, systemImage: "magnifyingglass")
                         }
                 }
-                .toolbarBackground(.black.opacity(0.8), for: .tabBar)
+                .toolbarBackground(Material.bar, for: .tabBar)
                 .toolbarBackground(.visible, for: .tabBar)
             }
         }
