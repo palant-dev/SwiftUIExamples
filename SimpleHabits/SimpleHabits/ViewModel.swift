@@ -8,12 +8,14 @@
 import Foundation
 
 class ViewModel: ObservableObject {
+    // MARK: Navigation Logic
     @Published var selectedTabBarItem: SimpleHabitsViews = .forYou
+
+
+    // MARK: Last session logic
     @Published var isSessionAlreadyStarted = false
-
-    var lastSessionDuration = 176
-    var secondsCompletedLastSession = 35
-
+    @Published var lastSessionDuration = 176
+    @Published var secondsCompletedLastSession = 35
     var lastSessionPercentageToCompletion: Double {
         Double(secondsCompletedLastSession)/Double(lastSessionDuration)
     }
