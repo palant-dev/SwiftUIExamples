@@ -10,7 +10,7 @@ import SwiftUI
 struct ActivityCard: View {
     var isActivityStarted: Bool
     var lastSessionCompletionPercentage: Double
-
+    
     var body: some View {
         Button {
 #warning("Add logic to the button of activity card")
@@ -24,34 +24,38 @@ struct ActivityCard: View {
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: geometry.size.width)
-
+                            
                             LinearGradient(gradient: Gradient(colors: [.clear,.black.opacity(0.4)]), startPoint: .init(x: 0, y: 0), endPoint: .init(x: 0, y:0.9))
                         }
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous))
                     }
-
+                
                 HStack {
                     VStack(alignment: .leading) {
                         Text("Antonio's starter")
                             .font(.title.bold())
                             .foregroundStyle(.white)
-
+                        
                         Text("5 mins · Meditation")
                             .foregroundStyle(.white)
-
+                        
                         ActivityCardProgressionBar(lastSessionCompletionPercentage: lastSessionCompletionPercentage)
                     }
-
-                    Spacer()
                     
-                    Circle()
-                        .frame(width: 50)
-                        .foregroundStyle(.accent)
-                        .overlay {
-                            Image(systemName: "play")
-                                .font(.title2)
-                                .foregroundStyle(.white)
-                        }
+                    Spacer()
+                    Button {
+#warning("Add logic for play button of last session card")
+                    } label: {
+                        Circle()
+                            .frame(width: 50)
+                            .foregroundStyle(.accent)
+                            .overlay {
+                                Image(systemName: "play")
+                                    .font(.title2)
+                                    .foregroundStyle(.white)
+                            }
+                    }
+                    
                 }
                 .padding(.horizontal)
                 .padding(.vertical)
