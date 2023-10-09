@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TodayProgressionCard: View {
+    var todayPercentageOfGoal: Double
     var body: some View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
@@ -22,7 +23,7 @@ struct TodayProgressionCard: View {
                     .padding(.vertical, 16)
                     .foregroundStyle(.white.opacity(0.1))
                 Circle()
-                    .trim(from: 0, to: 0.3)
+                    .trim(from: 0, to: todayPercentageOfGoal)
                     .stroke(style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
                     .padding(.horizontal, 120)
                     .padding(.vertical, 16)
@@ -30,7 +31,7 @@ struct TodayProgressionCard: View {
                     .foregroundStyle(.white.opacity(1))
 
                 VStack {
-                    Text("30%")
+                    Text("\(Int(todayPercentageOfGoal * 100)) %")
                         .font(.largeTitle.bold())
                     Text("Today Goal")
                 }
@@ -42,5 +43,5 @@ struct TodayProgressionCard: View {
 }
 
 #Preview {
-    TodayProgressionCard()
+    TodayProgressionCard(todayPercentageOfGoal: 0.34)
 }

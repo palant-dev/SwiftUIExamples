@@ -23,4 +23,7 @@ class ViewModel: ObservableObject {
     // MARK: Today status logic
     @Published var amountOfSecondsToday = 0
     @Published var todayTimeGoal = 600
+    var todayGoalPercentage: Double {
+        amountOfSecondsToday == 0 ? 0.0 : Double(todayTimeGoal) / Double(amountOfSecondsToday)
+    }
 }

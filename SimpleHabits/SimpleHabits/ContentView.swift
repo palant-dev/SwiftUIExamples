@@ -14,7 +14,7 @@ struct ContentView: View {
         VStack {
             TabView(selection: $vm.selectedTabBarItem ) {
                 Group {
-                    ForYouView(isSessionAlreadyStarted: vm.isSessionAlreadyStarted, lastSessionPercentageToCompletion: vm.lastSessionPercentageToCompletion)
+                    ForYouView(isSessionAlreadyStarted: vm.isSessionAlreadyStarted, lastSessionPercentageToCompletion: vm.lastSessionPercentageToCompletion, todayPercentageToGoal: vm.todayGoalPercentage)
                         .tabItem {
                             Label(SimpleHabitsViews.forYou.rawValue, systemImage: "play")
                         }

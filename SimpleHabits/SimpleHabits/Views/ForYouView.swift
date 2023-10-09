@@ -10,6 +10,7 @@ import SwiftUI
 struct ForYouView: View {
     var isSessionAlreadyStarted: Bool
     var lastSessionPercentageToCompletion: Double
+    var todayPercentageToGoal: Double
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,7 +33,7 @@ struct ForYouView: View {
                 ActivityCard(isActivityStarted: isSessionAlreadyStarted, lastSessionCompletionPercentage: lastSessionPercentageToCompletion)
                     .frame(minHeight: 284)
 
-                TodayProgressionCard()
+                TodayProgressionCard(todayPercentageOfGoal: todayPercentageToGoal)
             }
             .refreshable {
                 #warning("Add the action to the refreshing of For You View")
@@ -47,5 +48,5 @@ struct ForYouView: View {
 }
 
 #Preview {
-    ForYouView(isSessionAlreadyStarted: false, lastSessionPercentageToCompletion: 0.3)
+    ForYouView(isSessionAlreadyStarted: false, lastSessionPercentageToCompletion: 0.3, todayPercentageToGoal: 0.4)
 }
