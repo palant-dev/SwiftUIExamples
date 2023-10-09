@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ForYouView: View {
+    @Binding var isSessionAlreadyStarted: Bool
+
     var body: some View {
         VStack {
             HStack {
@@ -25,15 +27,12 @@ struct ForYouView: View {
             Spacer()
 
             HStack {
-                Text("Continue Listening")
+                Text(isSessionAlreadyStarted ? "Continue Listening" : "Start here")
                     .foregroundStyle(.white).bold()
                     .padding()
                 Spacer()
             }
-
-            RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
-                .foregroundStyle(.gray)
-                .padding(.horizontal)
+            ActivityCard()
 
             RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
                 .foregroundStyle(.wellnessScoreCardbg)
@@ -46,5 +45,5 @@ struct ForYouView: View {
 }
 
 #Preview {
-    ForYouView()
+    ForYouView(isSessionAlreadyStarted: .constant(false))
 }

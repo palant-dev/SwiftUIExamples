@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */; };
 		9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82983F2AD2B48F006784A7 /* ViewModel.swift */; };
 		9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */; };
 		9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		9E82983F2AD2B48F006784A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHabitsViews.swift; sourceTree = "<group>"; };
 		9EFF31752AD1EDFC001B4048 /* SimpleHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E4D9D022AD421C000C1DB31 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
 		9E8298412AD33743006784A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 				9EFF31892AD1F8B2001B4048 /* MeditateView.swift */,
 				9EFF318B2AD1F8D1001B4048 /* SleepView.swift */,
 				9EFF318D2AD1F8E1001B4048 /* SearchView.swift */,
+				9E4D9D022AD421C000C1DB31 /* ViewComponents */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +184,7 @@
 			files = (
 				9EFF317B2AD1EDFC001B4048 /* ContentView.swift in Sources */,
 				9EFF318C2AD1F8D1001B4048 /* SleepView.swift in Sources */,
+				9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */,
 				9EFF318A2AD1F8B2001B4048 /* MeditateView.swift in Sources */,
 				9EFF318E2AD1F8E1001B4048 /* SearchView.swift in Sources */,
 				9EFF31882AD1F5E9001B4048 /* ForYouView.swift in Sources */,
