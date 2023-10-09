@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ActivityCard: View {
+    @Binding var isModalShown: Bool
+
     var isActivityStarted: Bool
     var lastSessionCompletionPercentage: Double
 
+
     var body: some View {
         Button {
-#warning("Add logic to the button of activity card")
+            isModalShown.toggle()
         } label: {
             ZStack(alignment: .bottomLeading) {
                 RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
@@ -63,9 +66,12 @@ struct ActivityCard: View {
             }
             .padding(.horizontal)
         }
+        .sheet(isPresented: $isModalShown, content: {
+            LastSessionDetailsView()
+        })
     }
 }
 
 #Preview {
-    ActivityCard(isActivityStarted: true, lastSessionCompletionPercentage: 0.3)
+    ActivityCard(isModalShown: .constant(true), isActivityStarted: true, lastSessionCompletionPercentage: 0.3)
 }

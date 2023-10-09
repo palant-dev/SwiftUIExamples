@@ -10,6 +10,9 @@
 		9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */; };
 		9E5DCDD12AD444D600BAB28B /* ActivityCardProgressionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */; };
 		9E5DCDD32AD44EC600BAB28B /* TodayProgressionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD22AD44EC600BAB28B /* TodayProgressionCard.swift */; };
+		9E5DCDD52AD458DE00BAB28B /* LastSessionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD42AD458DE00BAB28B /* LastSessionDetailsView.swift */; };
+		9E5DCDD72AD463B900BAB28B /* DetailsViewsOfPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD62AD463B900BAB28B /* DetailsViewsOfPicker.swift */; };
+		9E5DCDD92AD4642800BAB28B /* DetailsOfSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5DCDD82AD4642700BAB28B /* DetailsOfSessionModel.swift */; };
 		9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82983F2AD2B48F006784A7 /* ViewModel.swift */; };
 		9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */; };
 		9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFF31782AD1EDFC001B4048 /* SimpleHabitsApp.swift */; };
@@ -26,6 +29,9 @@
 		9E4D9D032AD421E800C1DB31 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		9E5DCDD02AD444D600BAB28B /* ActivityCardProgressionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardProgressionBar.swift; sourceTree = "<group>"; };
 		9E5DCDD22AD44EC600BAB28B /* TodayProgressionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayProgressionCard.swift; sourceTree = "<group>"; };
+		9E5DCDD42AD458DE00BAB28B /* LastSessionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSessionDetailsView.swift; sourceTree = "<group>"; };
+		9E5DCDD62AD463B900BAB28B /* DetailsViewsOfPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewsOfPicker.swift; sourceTree = "<group>"; };
+		9E5DCDD82AD4642700BAB28B /* DetailsOfSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfSessionModel.swift; sourceTree = "<group>"; };
 		9E82983F2AD2B48F006784A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHabitsViews.swift; sourceTree = "<group>"; };
 		9EFF31752AD1EDFC001B4048 /* SimpleHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +66,20 @@
 			path = ViewComponents;
 			sourceTree = "<group>";
 		};
-		9E8298412AD33743006784A7 /* Models */ = {
+		9E5DCDDA2AD4644400BAB28B /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				9E8298422AD33787006784A7 /* SimpleHabitsViews.swift */,
+				9E5DCDD62AD463B900BAB28B /* DetailsViewsOfPicker.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9E8298412AD33743006784A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E5DCDDA2AD4644400BAB28B /* Enums */,
+				9E5DCDD82AD4642700BAB28B /* DetailsOfSessionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +129,7 @@
 				9EFF31892AD1F8B2001B4048 /* MeditateView.swift */,
 				9EFF318B2AD1F8D1001B4048 /* SleepView.swift */,
 				9EFF318D2AD1F8E1001B4048 /* SearchView.swift */,
+				9E5DCDD42AD458DE00BAB28B /* LastSessionDetailsView.swift */,
 				9E4D9D022AD421C000C1DB31 /* ViewComponents */,
 			);
 			path = Views;
@@ -188,14 +205,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5DCDD52AD458DE00BAB28B /* LastSessionDetailsView.swift in Sources */,
 				9E5DCDD12AD444D600BAB28B /* ActivityCardProgressionBar.swift in Sources */,
 				9EFF317B2AD1EDFC001B4048 /* ContentView.swift in Sources */,
+				9E5DCDD72AD463B900BAB28B /* DetailsViewsOfPicker.swift in Sources */,
 				9EFF318C2AD1F8D1001B4048 /* SleepView.swift in Sources */,
 				9E4D9D042AD421E800C1DB31 /* ActivityCard.swift in Sources */,
 				9EFF318A2AD1F8B2001B4048 /* MeditateView.swift in Sources */,
 				9EFF318E2AD1F8E1001B4048 /* SearchView.swift in Sources */,
 				9E5DCDD32AD44EC600BAB28B /* TodayProgressionCard.swift in Sources */,
 				9EFF31882AD1F5E9001B4048 /* ForYouView.swift in Sources */,
+				9E5DCDD92AD4642800BAB28B /* DetailsOfSessionModel.swift in Sources */,
 				9E8298432AD33787006784A7 /* SimpleHabitsViews.swift in Sources */,
 				9EFF31792AD1EDFC001B4048 /* SimpleHabitsApp.swift in Sources */,
 				9E8298402AD2B48F006784A7 /* ViewModel.swift in Sources */,

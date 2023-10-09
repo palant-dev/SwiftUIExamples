@@ -10,6 +10,8 @@ import Foundation
 class ViewModel: ObservableObject {
     // MARK: Navigation Logic
     @Published var selectedTabBarItem: SimpleHabitsViews = .forYou
+    @Published var detailsModalIsShown: Bool = false
+
 
 
     // MARK: Last session logic

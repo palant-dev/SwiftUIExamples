@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ForYouView: View {
+    @Binding var detailsModalIsShown: Bool
+
     var isSessionAlreadyStarted: Bool
     var lastSessionPercentageToCompletion: Double
     var todayPercentageToGoal: Double
@@ -30,16 +32,15 @@ struct ForYouView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
 
-                ActivityCard(isActivityStarted: isSessionAlreadyStarted, lastSessionCompletionPercentage: lastSessionPercentageToCompletion)
-                    .frame(minHeight: 284)
+                ActivityCard(isModalShown: $detailsModalIsShown, isActivityStarted: isSessionAlreadyStarted, lastSessionCompletionPercentage: lastSessionPercentageToCompletion)
+                        .frame(minHeight: 284)
+
 
                 TodayProgressionCard(todayPercentageOfGoal: todayPercentageToGoal)
             }
             .refreshable {
                 #warning("Add the action to the refreshing of For You View")
             }
-
-
         }
         .background {
             Color(.background).ignoresSafeArea()
@@ -48,5 +49,5 @@ struct ForYouView: View {
 }
 
 #Preview {
-    ForYouView(isSessionAlreadyStarted: false, lastSessionPercentageToCompletion: 0.3, todayPercentageToGoal: 0.4)
+    ForYouView(detailsModalIsShown: .constant(true), isSessionAlreadyStarted: false, lastSessionPercentageToCompletion: 0.3, todayPercentageToGoal: 0.4)
 }

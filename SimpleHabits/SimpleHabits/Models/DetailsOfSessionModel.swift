@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct DetailsOfSessionModel {
-    private var title: String
-    private var categoryName: String
-    private var numberOfPlays: Int
-    private var description: String
-    private var listOfRecordings: [String]
+    let title: String
+    let categoryName: String
+    let numberOfPlays: Int
+    let description: String
+    let listOfRecordings: [String]
 
-    static var example: DetailsOfSessionModel = DetailsOfSessionModel(
+    static let example: DetailsOfSessionModel = DetailsOfSessionModel(
         title: "Antonio's Starter",
         categoryName: "Meditation",
         numberOfPlays: 229849,
