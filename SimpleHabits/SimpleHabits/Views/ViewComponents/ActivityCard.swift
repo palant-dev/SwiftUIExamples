@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ActivityCard: View {
+    var isActivityStarted: Bool
+    var lastSessionCompletionPercentage: Double
+
     var body: some View {
         Button {
             #warning("Add logic to the button of activity card")
@@ -38,6 +41,16 @@ struct ActivityCard: View {
                             .foregroundStyle(.white)
                         Text("5 mins · Meditation")
                             .foregroundStyle(.white)
+                        RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: .continuous)
+                            .frame(height: 4)
+                            .foregroundStyle(.white)
+                            .overlay {
+                                GeometryReader { geometry in
+                                    Rectangle()
+                                        .frame(width: geometry.size.width * CGFloat(lastSessionCompletionPercentage))
+                                        .tint(.accent)
+                                }
+                            }
                     }
 
                     Spacer()
@@ -61,5 +74,5 @@ struct ActivityCard: View {
 }
 
 #Preview {
-    ActivityCard()
+    ActivityCard(isActivityStarted: true, lastSessionCompletionPercentage: 0.3)
 }

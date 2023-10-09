@@ -10,4 +10,11 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published var selectedTabBarItem: SimpleHabitsViews = .forYou
     @Published var isSessionAlreadyStarted = false
+
+    var lastSessionDuration = 176
+    var secondsCompletedLastSession = 35
+
+    var lastSessionPercentageToCompletion: Double {
+        Double(secondsCompletedLastSession)/Double(lastSessionDuration)
+    }
 }

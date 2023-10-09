@@ -8,35 +8,38 @@
 import SwiftUI
 
 struct ForYouView: View {
-    @Binding var isSessionAlreadyStarted: Bool
+    var isSessionAlreadyStarted: Bool
+    var lastSessionPercentageToCompletion: Double
 
     var body: some View {
-        VStack {
-            HStack {
-                Circle()
-                    .frame(width: 36, height: 36, alignment: .center)
-                    .foregroundStyle(.accountButtonIcon)
-                    .overlay {
-                        Image(systemName: "person")
-                            .foregroundStyle(.white)
-                    }
-                    .padding()
-                Spacer()
+        VStack(alignment: .leading) {
+            Circle()
+                .frame(width: 36, height: 36, alignment: .center)
+                .foregroundStyle(.accountButtonIcon)
+                .overlay {
+                    Image(systemName: "person")
+                        .foregroundStyle(.white)
+                }
+                .padding()
+
+            Text(isSessionAlreadyStarted ? "Continue Listening" : "Start here")
+                .foregroundStyle(.white).bold()
+                .padding()
+
+            ScrollView() {
+                ActivityCard(isActivityStarted: isSessionAlreadyStarted, lastSessionCompletionPercentage: lastSessionPercentageToCompletion)
+                    .frame(minHeight: 284)
+
+                RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                    .foregroundStyle(.wellnessScoreCardbg)
+                    .padding(.horizontal)
+                    .frame(minHeight: 284)
+            }
+            .refreshable {
+                #warning("Add the action to the refreshing of For You View")
             }
 
-            Spacer()
 
-            HStack {
-                Text(isSessionAlreadyStarted ? "Continue Listening" : "Start here")
-                    .foregroundStyle(.white).bold()
-                    .padding()
-                Spacer()
-            }
-            ActivityCard()
-
-            RoundedRectangle(cornerSize: CGSize(width: 8, height: 8), style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
-                .foregroundStyle(.wellnessScoreCardbg)
-                .padding(.horizontal)
         }
         .background {
             Color(.background).ignoresSafeArea()
@@ -45,5 +48,5 @@ struct ForYouView: View {
 }
 
 #Preview {
-    ForYouView(isSessionAlreadyStarted: .constant(false))
+    ForYouView(isSessionAlreadyStarted: false, lastSessionPercentageToCompletion: 0.3)
 }
